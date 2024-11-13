@@ -16,7 +16,7 @@
   const event = new Event('change', { bubbles: true });
   const button = document.createElement('input');
   button.type = 'button';
-  button.value = 'Clear All Apps';
+  button.value = 'Uninstall All Apps';
   button.onclick = () => {
       clearAll();
   };
