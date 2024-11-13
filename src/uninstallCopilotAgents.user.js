@@ -4,9 +4,9 @@
 // @version      1.0
 // @description  Uninstall Copilot Agents that you created
 // @author       Siglud
-// @source       https://github.com/siglud/Teams-Apps-Clear/raw/main/src/ClearTeamsApps.user.js
-// @namespace    https://github.com/siglud/Teams-Apps-Clear/raw/main/src/ClearTeamsApps.user.js
-// @match        https://dev.teams.microsoft.com/apps
+// @source       https://github.com/huimiu/Uninstall-Copilot-Agents/row/main/src/uninstallCopilotAgents.user.js
+// @namespace    https://github.com/huimiu/Uninstall-Copilot-Agents/row/main/src/uninstallCopilotAgents.user.js
+// @match        https://www.office.com/chat?auth=2
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=microsoft.com
 // @grant        none
 // ==/UserScript==
