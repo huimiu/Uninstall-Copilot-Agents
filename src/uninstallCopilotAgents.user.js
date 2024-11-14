@@ -21,7 +21,7 @@
       clearAll();
   };
 
-  retryUntilElementReady(() => document.querySelector('main'), (contentArea) => {
+  retryUntilElementReady(() => document.querySelector('fui-InlineDrawer'), (contentArea) => {
       contentArea.appendChild(button);
       console.log('Button added');
   }, 'still waiting for main content area');
