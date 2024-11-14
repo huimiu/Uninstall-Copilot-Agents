@@ -32,25 +32,32 @@
           alert('All Apps Cleared!');
           return;
       }
+      retryUntilElementReady(() => document.querySelector('fui-TreeItemLayout'), (element) => {
+          const event = new MouseEvent('mouseover', {
+              bubbles: true,
+          cancelable: true,
+          });
+          element.dispatchEvent(event);
+      }, 'still waiting for element');
 
-      delBtn.click();
-      retryUntilElementReady(() => document.querySelector(".ui-popup__content li:nth-child(3) a"), (panel) => {
-          panel.click();
-          retryUntilElementReady(() => document.querySelector(".ui-box>div[role='dialog'] span"), (verifyColumn) => {
-              retryUntilElementReady(() => document.querySelector(".ui-box>div[role='dialog'] section input"), (input) => {
-                  input.value = verifyColumn.innerText;
-                  input._valueTracker.setValue('');
-                  input.dispatchEvent(event);
-                  retryUntilElementReady(() => document.querySelector('.ui-dialog__footer button:nth-child(2)'), (deleteButton) => {
-                      deleteButton.click();
-                      retryUntilElementReady(() => document.querySelector('div[role="alert"] button'), (doneBtn) => {
-                          doneBtn.click();
-                          clearAll();
-                      }, 'still waiting for done button');
-                  }, 'still waiting for delete button');
-              }, 'still waiting for verify column');
-          }, 'still waiting for verify column');
-      }, 'still waiting for delete button');
+    //   delBtn.click();
+    //   retryUntilElementReady(() => document.querySelector(".ui-popup__content li:nth-child(3) a"), (panel) => {
+    //       panel.click();
+    //       retryUntilElementReady(() => document.querySelector(".ui-box>div[role='dialog'] span"), (verifyColumn) => {
+    //           retryUntilElementReady(() => document.querySelector(".ui-box>div[role='dialog'] section input"), (input) => {
+    //               input.value = verifyColumn.innerText;
+    //               input._valueTracker.setValue('');
+    //               input.dispatchEvent(event);
+    //               retryUntilElementReady(() => document.querySelector('.ui-dialog__footer button:nth-child(2)'), (deleteButton) => {
+    //                   deleteButton.click();
+    //                   retryUntilElementReady(() => document.querySelector('div[role="alert"] button'), (doneBtn) => {
+    //                       doneBtn.click();
+    //                       clearAll();
+    //                   }, 'still waiting for done button');
+    //               }, 'still waiting for delete button');
+    //           }, 'still waiting for verify column');
+    //       }, 'still waiting for verify column');
+    //   }, 'still waiting for delete button');
   }
 
   function retryUntilElementReady(selector, callback, errorLog) {
