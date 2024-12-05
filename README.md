@@ -1,4 +1,4 @@
-# Uninstall-Agents.ps1
+# Remove Copilot Agents Automatically
 
 This PowerShell script helps you uninstall Copilot Agents.
 
