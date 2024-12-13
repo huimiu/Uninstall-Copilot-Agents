@@ -47,7 +47,7 @@ function Execute-UninstallCommands {
             continue
         }
 
-        if ($item.gptIdentifier && $item.gptIdentifier.metaOSSharedServicesTitleId) {
+        if ($item.gptIdentifier -and $item.gptIdentifier.metaOSGlobalIdentifier) {
             $current++
             $titleId = $item.gptIdentifier.metaOSGlobalIdentifier.metaOSSharedServicesTitleId
             $agentName = $item.name
