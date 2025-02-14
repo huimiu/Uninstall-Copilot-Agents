@@ -14,7 +14,7 @@ This PowerShell script helps you uninstall Copilot Agents.
    ![Snipaste_2024-12-03_16-08-53](https://github.com/user-attachments/assets/50b03bf8-ec16-4327-b20c-092b159017cd)
 4. Find the request named `GetGptList?request=...`.
 5. Click on the request, go to **Preview** tab, right click the response body, and select **Copy value**.
-   ![Snipaste_2024-12-03_16-11-35](https://github.com/user-attachments/assets/a7a541ed-b843-473d-be60-a011b39c2c8e)
+   ![image](https://github.com/user-attachments/assets/ec87195b-8f81-4607-a11c-75b08e26e4df)
 6. Paste the value into `GptList.json` file.
 7. Navigate to the directory containing the **Uninstall-Agents.ps1** script.
 8. Run the script:
